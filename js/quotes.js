@@ -238,6 +238,90 @@ const quotes = [
     quote: "한 번의 실패와 영원한 실패를 혼동하지 마라.",
     author: "F. 스콧 피츠제럴드",
   },
+  {
+    quote: "자유는 책임이다. 그래서 대부분의 사람들은 자유를 두려워한다.",
+    author: "조지 버나드 쇼",
+  },
+  {
+    quote: "실패를 두려워 한다면 아마도 당신은 실패를 할 것이다.",
+    author: "코비 브라이언트",
+  },
+  {
+    quote: "나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다.",
+    author: "토마스 제퍼슨",
+  },
+  {
+    quote:
+      "앞으로 20년 후에는 당신이 저지른 일보다 당신이 저지르지 않은 일에 더 큰 실망을 하게 될 것이다.",
+    author: "마크 트웨인",
+  },
+  {
+    quote:
+      "네가 누구인지, 무엇인지 말해 줄 사람은 필요없다. 너는 그냥 너 지산일 뿐이다.",
+    author: "존 레논",
+  },
+  {
+    quote: "나약한 태도는 그 사람 자체도 나약하게 만든다.",
+    author: "알버트 아인슈타인",
+  },
+  { quote: "노력하는 사람에게 불가능이란 없다.", author: "알렉산더 대왕" },
+  {
+    quote:
+      "운명이 사람을 결정하는 것이 아니다. 사람이 자신의 습관을 결정하고 그 습관이 곧 운명이 된다.",
+    author: "마이크 머독",
+  },
+  {
+    quote:
+      "무의식을 의식화 하지 않으면 무의식이 우리 삶의 방향을 결정하게 되는데 우리는 바로 이런 것을 두고 운명이라고 부른다.",
+    author: "칼 융",
+  },
+  {
+    quote: "본연의 모습은 바꿀 수 없다. 바꿀 수 있는 것은 자신의 행동 뿐.",
+    author: "필립 폴먼",
+  },
+  {
+    quote: "지나간 불행을 한탄하는 것은 새로운 불행을 불러들이는 지름길이다.",
+    author: "윌리엄 셰익스피어",
+  },
+  {
+    quote: "세상은 고통으로 가득하지만 그것을 극복하는 사람들로도 가득하다.",
+    author: "헬렌 켈러",
+  },
+  {
+    quote:
+      "모든 사람은 천재다. 하지만 물고기들을 나무 타기 실력으로 평가한다면 물고기는 평생 자신이 형편없다고 믿으며 살아갈 것이다.",
+    author: "알버트 아인슈타인",
+  },
+  {
+    quote:
+      "살다 보면 흔히 저지르게 되는 두 가지 실수가 있습니다. 첫째는 아예 시작도 하지 않는 것이고 둘째는 끝까지 하지 않는 것이다.",
+    author: "파울로 코엘료",
+  },
+  {
+    quote:
+      "한 번도 가져본 적 없는 것을 원한다면, 한 번도 해본 적 없는 것을 해야 한다.",
+    author: "가브리엘 샤넬",
+  },
+  {
+    quote:
+      "어떤 일이든 할 수 있고 이루어진다고 마음먹어라. 그리고 그 방법을 찾아라.",
+    author: "에이브러햄 링컨",
+  },
+  { quote: "당신이 아니면 누가 하겠는가?", author: "조던 피터슨의 일기장" },
+  {
+    quote: "인생에 뜻을 세우는데 있어 늦은 때라곤 없다.",
+    author: "제임스 볼드윈",
+  },
+  {
+    quote:
+      "실수를 범했을 때 뒤돌아 보지 말라. 과거를 바꿀 순 없지만 미래는 아직 네 손에 달려있다.",
+    author: "휴 화이트",
+  },
+  {
+    quote: "행복은 여정이지 목적지가 아니라는 점을 기억하라.",
+    author: "로이 M. 굿맨",
+  },
+  { quote: "모든 단점은 장점이 될 수 있다.", author: "리오넬 메시" },
   { quote: "", author: "" },
 ];
 
@@ -247,4 +331,4 @@ const author = document.querySelector(".quotes div");
 const todayQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quoteSpan.innerText = todayQuote.quote;
-author.innerHTML = `<a href="https://www.google.com/search?q=${todayQuote.author}">${todayQuote.author}</a>`;
+author.innerHTML = `<a target="_blank" href="https://www.google.com/search?q=${todayQuote.author}">${todayQuote.author}</a>`;
