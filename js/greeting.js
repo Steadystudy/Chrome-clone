@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greetingComment = document.querySelector(".greeting");
+const nav = document.querySelector(".nav");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -17,12 +18,22 @@ const makeGreeting = (username) => {
   greetingComment.innerText = `Hello ${username}`;
   greetingComment.classList.remove(HIDDEN_CLASSNAME);
 };
+const login = () => {
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", handleLoginSubmit);
+};
 
-const savedUsername = localStorage.getItem(USERNAME_KEY);
+let savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if (savedUsername) {
   makeGreeting(savedUsername);
 } else {
-  loginForm.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener("submit", handleLoginSubmit);
+  login();
 }
+
+function changeName() {
+  localStorage.removeItem(USERNAME_KEY);
+  login();
+}
+
+nav.querySelector("i").addEventListener("click", changeName);
